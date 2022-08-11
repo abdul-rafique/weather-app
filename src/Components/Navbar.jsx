@@ -22,14 +22,14 @@ function Navbar(props) {
           Weather App
         </a>
       </div>
-      {/* Search Box */}
-      <div className="flex-none hidden">
+      {/* Search Box for large screen */}
+      <div className="flex-none group hidden md:block">
         <div className="form-control">
           <div className="input-group">
             <input
               type="text"
               placeholder="Search..."
-              className="input input-bordered"
+              className="input input-bordered "
               value={searchValue}
               onChange={handleSearchChange}
             />
@@ -42,6 +42,7 @@ function Navbar(props) {
           </div>
         </div>
       </div>
+      {/* Search Box for large screen */}
 
       {/* Drawer Opener */}
       <div className="flex-none">
