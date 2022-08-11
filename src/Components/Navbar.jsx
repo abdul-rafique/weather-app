@@ -1,5 +1,9 @@
 import React from "react";
-import { IoSearchOutline, IoMenuOutline } from "react-icons/io5";
+import {
+  IoSearchOutline,
+  IoMenuOutline,
+  IoCloudOutline,
+} from "react-icons/io5";
 
 function Navbar(props) {
   const { handleLocationChange } = props;
@@ -11,11 +15,15 @@ function Navbar(props) {
 
   return (
     <div className="navbar gap-3 sticky top-0 z-20 bg-base-100 shadow">
+      {/* Logo */}
       <div className="flex-1">
-        <a className="btn btn-link normal-case text-xl">Weather App</a>
+        <a className="btn btn-link normal-case text-xl hover:no-underline flex gap-2">
+          <IoCloudOutline size={32} />
+          Weather App
+        </a>
       </div>
-
-      <div className="flex-none">
+      {/* Search Box */}
+      <div className="flex-none hidden">
         <div className="form-control">
           <div className="input-group">
             <input
@@ -35,6 +43,7 @@ function Navbar(props) {
         </div>
       </div>
 
+      {/* Drawer Opener */}
       <div className="flex-none">
         <label
           htmlFor="myDrawer"

@@ -26,55 +26,55 @@ function Icon(props) {
   const handleIcon = useCallback(() => {
     switch (name) {
       case "snow":
-        return <WiSnow size={size} />;
+        return <WiSnow size={size} {...props} />;
 
       case "snow-showers-day":
-        return <WiDaySnow size={size} />;
+        return <WiDaySnow size={size} {...props} />;
 
       case "snow-showers-night":
-        return <WiNightSnow size={size} />;
+        return <WiNightSnow size={size} {...props} />;
 
       case "rain":
-        return <WiRain size={size} />;
+        return <WiRain size={size} {...props} />;
 
       case "thunder-rain":
-        return <WiThunderstorm size={size} />;
+        return <WiThunderstorm size={size} {...props} />;
 
       case "thunder-showers-day":
-        return <WiDayThunderstorm size={size} />;
+        return <WiDayThunderstorm size={size} {...props} />;
 
       case "thunder-showers-night":
-        return <WiNightAltThunderstorm size={size} />;
+        return <WiNightAltThunderstorm size={size} {...props} />;
 
       case "showers-day":
-        return <WiDayShowers size={size} />;
+        return <WiDayShowers size={size} {...props} />;
 
       case "showers-night":
-        return <WiNightAltShowers size={size} />;
+        return <WiNightAltShowers size={size} {...props} />;
 
       case "fog":
-        return <WiFog size={size} />;
+        return <WiFog size={size} {...props} />;
 
       case "wind":
-        return <WiWindy size={size} />;
+        return <WiWindy size={size} {...props} />;
 
       case "cloudy":
-        return <WiCloudy size={size} />;
+        return <WiCloudy size={size} {...props} />;
 
       case "partly-cloudy-day":
-        return <WiDayCloudy size={size} />;
+        return <WiDayCloudy size={size} {...props} />;
 
       case "partly-cloudy-night":
-        return <WiNightAltPartlyCloudy size={size} />;
+        return <WiNightAltPartlyCloudy size={size} {...props} />;
 
       case "clear-day":
-        return <WiDaySunny size={size} />;
+        return <WiDaySunny size={size} {...props} />;
 
       case "clear-night":
-        return <WiNightClear size={size} />;
+        return <WiNightClear size={size} {...props} />;
 
       default:
-        return <IoHelp size={size} />;
+        return <IoHelp size={size} {...props} />;
     }
   }, [name, size]);
 
