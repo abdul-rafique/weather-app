@@ -23,7 +23,7 @@ function Sidebar(props) {
           htmlFor="myDrawer"
           className="absolute z-20 right-2 btn btn-ghost drawer-button px-2"
         >
-          <IoClose size={32} />
+          <IoClose size={32} className="lg:hidden" />
         </label>
         <ul className="menu p-4 h-full bg-base-100 text-base-content">
           {/* <!-- Sidebar content here --> */}

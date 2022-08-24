@@ -1,5 +1,6 @@
 import React from "react";
 import { WiSunrise, WiSunset } from "react-icons/wi";
+import { ClockLoader } from "react-spinners";
 import { useFetchWeatherByCityQuery } from "./features/weather/weather-api-slice";
 
 import Navbar from "./Components/Navbar";
@@ -7,7 +8,6 @@ import PredictionCard from "./Components/PredictionCard";
 import WeatherCard from "./Components/WeatherCard";
 import WeatherParameters from "./Components/WeatherParameters";
 import Sidebar from "./Components/Sidebar";
-import { ClockLoader } from "react-spinners";
 import SunSetAndRise from "./Components/SunSetAndRise";
 
 function App() {
@@ -28,14 +28,14 @@ function App() {
         <Navbar handleLocationChange={handleLocationChange} />
 
         {/* <!-- Main content Start --> */}
-        {/* onFetching */}
+        {/* onFetch */}
         {isFetching && (
           <div className="h-screen flex items-center justify-center">
             <ClockLoader size={64} className="bg-primary" />
           </div>
         )}
 
-        {/* onLoading */}
+        {/* onLoad */}
         {isLoading && (
           <div className="h-screen flex items-center justify-center">
             Loading...
@@ -62,7 +62,7 @@ function App() {
             </div>
 
             {/* Sunrise and Sunset Time */}
-            <div className="flex justify-center items-center gap-36 mb-10 font-semibold">
+            <div className="flex justify-center items-center gap-16 md:gap-36 mb-10 font-semibold">
               <SunSetAndRise
                 Icon={WiSunrise}
                 time={data.currentConditions.sunrise}

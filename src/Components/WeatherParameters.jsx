@@ -5,34 +5,28 @@ function WeatherParameters(props) {
   const { data } = props;
 
   return (
-    <div className="card card-bordered bg-base-content text-base-100 overflow-visible">
-      <div className="card-body flex-row gap-10 py-5 pr-14 font-semibold">
+    <div className="min-w-fit card card-bordered bg-base-content text-base-100 text-lg overflow-visible">
+      <div className="min-w-fit card-body md:flex-row gap-5 md:gap-10 py-5 pl-5 md:pl-8 md:pr-14 font-semibold">
         <div
-          className="flex items-center tooltip tooltip-info"
+          className="min-w-fit flex items-center flex-1 tooltip tooltip-info"
           data-tip="Humidity"
         >
           <WiRaindrop size={36} />
-          <span className="block text-xl">
-            {data.currentConditions.humidity}%
-          </span>
+          <span className="block">{data.currentConditions.humidity}%</span>
         </div>
         <div
-          className="flex items-center gap-2 tooltip tooltip-info"
+          className="min-w-fit flex flex-nowrap items-center gap-2 tooltip tooltip-info"
           data-tip="Wind Speed"
         >
           <WiWindy size={36} />
-          <span className="block text-xl">
-            {data.currentConditions.windspeed} km/h
-          </span>
+          <span className="block">{data.currentConditions.windspeed} km/h</span>
         </div>
         <div
-          className="flex items-center gap-2 tooltip tooltip-info"
+          className="min-w-fit flex items-center gap-2 tooltip tooltip-info"
           data-tip="Cloud"
         >
           <WiCloud size={36} />
-          <span className="block text-xl">
-            {data.currentConditions.cloudcover}%
-          </span>
+          <span className="block">{data.currentConditions.cloudcover}%</span>
         </div>
       </div>
     </div>

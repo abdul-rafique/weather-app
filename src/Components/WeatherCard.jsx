@@ -31,15 +31,15 @@ function WeatherCard(props) {
           {getCustomDateFormat(data.timezone)}
         </h3>
 
-        <span className="block text-xl lg:text-2xl">
+        <span className="block text-xl lg:text-2xl text-center">
           {data.resolvedAddress}
         </span>
         <div className="flex flex-col justify-center items-center gap-2">
-          <div className="flex items-center justify-center gap-x-3 pr-10">
+          <div className="flex items-center justify-center gap-x-2 pr-10">
             <div className="mt-5">
               <Icon
                 name={data.currentConditions.icon}
-                size={dimensions.width > 425 ? 196 : 96}
+                size={dimensions.width > 425 ? 196 : 128}
               />
             </div>
 
@@ -47,8 +47,8 @@ function WeatherCard(props) {
               <span className="relative text-7xl md:text-9xl">
                 {Math.ceil(data.currentConditions.temp)}
                 <WiCelsius
-                  size={dimensions.width > 425 ? 128 : 96}
-                  className="absolute -top-5 -right-[4.5rem] md:-right-24"
+                  size={dimensions.width > 425 ? 128 : 72}
+                  className="absolute -top-5 -right-10 md:-right-24"
                 />
               </span>
             </div>
